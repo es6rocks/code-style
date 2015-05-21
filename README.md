@@ -16,14 +16,14 @@ Always use strict mode.
 - Lines should be no longer than 100. There are 2 exceptions:
     - If the line contains a comment with a long URL.
     - If the line contains a regex literal. This prevents having to use the regex constructor which requires otherwise unnecessary string escaping.
-- `if`/`else`/`for`/`while`/`try` always have braces and always go on multiple lines, and always with one space before and after `(` and `)`.
+- `if`/`else`/`for`/`while`/`try` always have braces and always go on multiple lines.
 
     ```js
     // Bad
-    if(condition) return;
+    if (condition) return;
 
     // Good
-    if ( condition ) {
+    if (condition) {
         return;
     }
     ```
@@ -141,8 +141,8 @@ baz = baz? 'abc': 'def;
 When a conditional is too long to fit on one line, successive lines must be indented one extra level to distinguish them from the body.
 
 ```js
-if ( firstCondition() && secondCondition() &&
-        thirdCondition() ) {
+if (firstCondition() && secondCondition() &&
+        thirdCondition()) {
     doStuff();
 }
 ```
@@ -197,7 +197,7 @@ undefOrNull == null;
 When checking for `undefined`, prefer using `void(0)` instead.
 
 ```js
-if ( something === void(0) ) {
+if (something === void(0)) {
     // magic
 }
 ```
@@ -298,10 +298,10 @@ Also, always use braces, and prefer to define a default to it whenever possible.
 
 ```js
 // bad
-throw "something went wrong!";
+throw 'something went wrong!';
 
 // god
-throw new Error("something went wrong!");
+throw new Error('something went wrong!');
 ```
 
 - Avoid using multiple try/catch.
@@ -319,7 +319,7 @@ try {
     console.error('this failed');
 }
 
-// god
+// good
 try {
     // in case of error, throws a new Error('this failed');
     doThis();
