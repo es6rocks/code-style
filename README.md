@@ -290,7 +290,7 @@ switch (parseInt(theNum, 10)) {
     default: {}
 }
 ```
-Also, always use braces, and prefer to define a default to it whenever is possible.
+Also, always use braces, and prefer to define a default to it whenever possible.
 
 ## Throwing, Trying and Catching
 
